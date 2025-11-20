@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+}
+
+.header {
+    background: #e65100;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.logo {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* HERO IMAGE */
+/* HERO IMAGE */
+/* HERO IMAGE */
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+/* SEARCH BAR SIDE-BY-SIDE (LIKE YOUR FIRST IMAGE) */
+.search-container {
+    position: absolute;
+    top: 40%;              /* Adjust position on image */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 12px;
+}
+
+/* SEARCH INPUT */
+.search-box {
+    border-radius:25px;
+    border: none;
+    padding: 4px 10px;
+    font-size: 16px;
+    outline: none;
+   
+}
+
+/* ROUND ORANGE MAGNIFY BUTTON */
+.search-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: orange;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TITLE */
+.hero-title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.8);
+}
+
+/* SUBTITLE */
+.hero-sub {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.7);
+}
+
+
+
+.side-menu {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    padding: 15px;
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-menu {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#sideCategoryList {
+    margin-top: 15px;
+}
+
+#sideCategoryList li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+#sideCategoryList li:hover {
+    background: #ffe0c2;
+}
+
+.hidden {
+    display: none;
+}
