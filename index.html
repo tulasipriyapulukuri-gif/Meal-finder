@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal Finder</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
     <!-- HEADER -->
-    <header class="header">
-        <h2 class="logo"><i class="fa-solid fa-house-chimney"></i> Meal Finder</h2>
+    <header class="nav">
+        <h2 id="homeLink" class="logo"><i class="fa-solid fa-utensils" style="color: white;"></i>
+            MEAL FINDER</h2>
 
-      
-
-           <div class="side-menu" id="sideMenu">
-        <div class="menu-header">
-            <i class="fa-solid fa-xmark close-menu" id="closeMenu"></i>
+        <div id="hamburger" class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-        <ul id="sideCategoryList"></ul>
-    </div>
     </header>
 
-<div class="hero">
-
-<img src="./assests/homepage.pic.jpg" alt="homepage.pic">
-
-    <!-- Search Bar + Icon -->
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search recipes..." class="search-box" />
-        <button id="searchBtn" class="search-btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+    <!-- SEARCH + TITLE -->
+    <div class="hero">
+        <input type="text" id="searchInput" placeholder="          Search recipes here..."/>
+        <h1>What are your favorite cuisines?</h1>
+        <p>PERSONALIZE YOUR EXPERIENCE </p>
     </div>
 
-    <!-- Titles -->
-    <h2 class="hero-title">What are your favorite cuisines?</h2>
-    <p class="hero-sub">PERSONALIZE YOUR EXPERIENCE</p>
+    <!-- =========== SECTIONS =========== -->
 
-</div>
+    <!-- HOME: CATEGORIES -->
+    <section id="page-categories">
+        <h2 class="title">CATEGORIES</h2>
+        <div id="categories" class="categories"></div>
+    </section>
 
+    <!-- CATEGORY RESULTS -->
+    <section id="page-meals" style="display:none;">
+        <h2 id="mealCategoryTitle" class="title"></h2>
+        <div id="mealList"></div>
+    </section>
 
+    <!-- MEAL DETAILS -->
+    <section id="page-details" style="display:none;">
+        <div id="mealDetails"></div>
+    </section>
 
->
+    <!-- SEARCH RESULTS -->
+    <section>
+        <h2 class="title"></h2>
+        <div id="results"></div>
+    </section>
 
-
-    <script src="./app.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
