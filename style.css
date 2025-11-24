@@ -3,7 +3,7 @@ body {
     font-family: Verdana, sans-serif;
 }
 
-/* HEADER */
+
 .nav {
     height: 60px;
     background: rgb(190, 80, 1);
@@ -19,7 +19,7 @@ body {
 .title{
     color: rgb(210, 99, 19);
 }
-/* HAMBURGER */
+
 .hamburger {
     cursor: pointer;
 }
@@ -30,7 +30,6 @@ body {
     margin: 4px 0;
 }
 
-/* SLIDE MENU */
 .side-menu {
     position: fixed;
     top: 0;
@@ -61,7 +60,7 @@ body {
     cursor: pointer;
 }
 
-/* HERO */
+
 .hero {
     position: relative;
     height: 300px;
@@ -88,7 +87,7 @@ body {
     z-index: 2;
 }
 
-/* SEARCH BAR */
+
 .search-box {
     position: relative;
     width: 700px;
@@ -112,7 +111,7 @@ body {
     color: gray;
 }
 
-/* SEARCH RESULTS */
+
 #search-section {
     padding: 20px;
 }
@@ -128,7 +127,6 @@ body {
     padding: 10px 20px;
 }
 
-/* CATEGORY GRID */
 .categories {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -160,7 +158,6 @@ body {
     font-size: 12px;
 }
 
-/* MEALS GRID */
 #mealList {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -183,7 +180,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Orange title like first image */
+
 .category-description-box h3 {
     margin: 0 0 10px 0;
     color: #ff7b00;
@@ -191,7 +188,7 @@ body {
     font-weight: 700;
 }
 
-/* Black description text */
+
 .category-description-box p {
     margin: 0;
     color: #000;
@@ -199,7 +196,7 @@ body {
     line-height: 1.6;
 }
 
-/* MEAL DETAILS PAGE */
+
 .meal-details-container {
     display: flex;
     gap: 20px;
@@ -230,12 +227,11 @@ body {
     color: #ff7b00;
 }
 
-/* Ingredients box */
 .ingredients-box {
-    background: #ff7b00; /* Original color for the box */
+    background: #ff7b00; 
     padding: 20px;
     border-radius: 12px;
-    color: white; /* Text inside the box */
+    color: white; 
     margin: 10px 0;
 }
 
@@ -245,7 +241,7 @@ body {
     font-weight: 700;
 }
 
-/* Ingredients List */
+
 .ingredients-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(150px, 1fr));
@@ -261,19 +257,18 @@ body {
     font-size: 14px;
     display: flex;
     align-items: center;
-    color: black; /* Text color set to black */
-    background-color: #f2f2f2; /* Light gray background for ingredients */
+    color: black; 
+    background-color: #f2f2f2; 
 }
 
-/* Spoon before each li */
+
 .ingredients-list li::before {
-    content: "🥄";
+    content: "";
     margin-right: 8px;
     font-size: 14px;
 }
 
 
-/* Tablet */
 @media (max-width: 900px) {
     .search-box {
         width: 90%;
@@ -284,7 +279,7 @@ body {
     }
 }
 
-/* Phone */
+
 @media (max-width: 600px) {
     .search-box {
         width: 95%;
