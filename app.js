@@ -8,12 +8,11 @@ let searchTitle = document.getElementById("searchTitle");
 let sideMenu = document.getElementById("sideMenu");
 let sideList = document.getElementById("sideList");
 
-// Pages
 let pageCategories = document.getElementById("page-categories");
 let pageMeals = document.getElementById("page-meals");
 let pageDetails = document.getElementById("page-details");
 
-// Function → show page
+
 function showPage(page) {
     pageCategories.style.display = "none";
     pageMeals.style.display = "none";
@@ -21,7 +20,7 @@ function showPage(page) {
     page.style.display = "block";
 }
 
-// Load Categories on Home
+
 async function loadCategories() {
     let res = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
     let data = await res.json();
@@ -37,7 +36,7 @@ async function loadCategories() {
         )
         .join("");
 
-    // Also fill slide menu   ⭐ FIXED
+
     sideList.innerHTML = data.categories
         .map(
             (cat) => `
@@ -48,14 +47,13 @@ async function loadCategories() {
 }
 loadCategories();
 
-// Open Category
+
 async function openCategory(catName) {
     searchTitle.style.display = "none";
     resultsContainer.innerHTML = "";
 
     showPage(pageMeals);
 
-    // Fetch category description
     let catRes = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
     let catData = await catRes.json();
     let category = catData.categories.find((c) => c.strCategory === catName);
@@ -68,7 +66,6 @@ async function openCategory(catName) {
         </div>
     `;
 
-    // Fetch meals
     let res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${catName}`);
     let data = await res.json();
 
@@ -84,7 +81,7 @@ async function openCategory(catName) {
         .join("");
 }
 
-// OPEN MEAL
+
 async function openMeal(id) {
     showPage(pageDetails);
 
@@ -121,7 +118,7 @@ async function openMeal(id) {
     `;
 }
 
-// INGREDIENTS FUNCTION ⭐ FIXED
+
 function getIngredients(meal) {
     let list = "";
 
@@ -136,7 +133,7 @@ function getIngredients(meal) {
     return list;
 }
 
-// Search Meals
+
 searchInput.addEventListener("keyup", async () => {
     let value = searchInput.value.trim();
 
@@ -169,17 +166,15 @@ searchInput.addEventListener("keyup", async () => {
         .join("");
 });
 
-// Hamburger Open
 document.getElementById("hamburger").onclick = () => {
     sideMenu.classList.add("open");
 };
 
-// Close Sidebar
+
 document.getElementById("closeMenu").onclick = () => {
     sideMenu.classList.remove("open");
 };
 
-// Home Click
 document.getElementById("homeLink").onclick = () => {
     showPage(pageCategories);
     searchTitle.style.display = "none";
