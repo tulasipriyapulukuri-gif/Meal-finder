@@ -230,38 +230,48 @@ body {
     color: #ff7b00;
 }
 
+/* Ingredients box */
+.ingredients-box {
+    background: #ff7b00; /* Original color for the box */
+    padding: 20px;
+    border-radius: 12px;
+    color: white; /* Text inside the box */
+    margin: 10px 0;
+}
+
+.ingredients-box h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Ingredients List */
 .ingredients-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 8px 12px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .ingredients-list li {
-    background: white;
-    border: 1px solid #ffd1a1;
-    padding: 8px 10px;
+    padding: 6px 10px;
     border-radius: 6px;
-    margin-bottom: 6px;
-    font-size: 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: black; /* Text color set to black */
+    background-color: #f2f2f2; /* Light gray background for ingredients */
 }
 
-.instructions-box {
-    margin: 20px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    border-left: 4px solid #ff7b00;
+/* Spoon before each li */
+.ingredients-list li::before {
+    content: "🥄";
+    margin-right: 8px;
+    font-size: 14px;
 }
 
-.instructions-box h3 {
-    margin-top: 0;
-    color: #ff7b00;
-}
-
-.instructions-box p {
-    line-height: 1.7;
-    white-space: pre-line;
-}
 
 /* Tablet */
 @media (max-width: 900px) {
